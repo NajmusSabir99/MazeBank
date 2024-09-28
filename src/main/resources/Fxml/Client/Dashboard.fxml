@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard" stylesheets="@../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazebank.Controllers.Client.DashboardController">
+<AnchorPane prefHeight="688.0" prefWidth="850.0" styleClass="dashboard" stylesheets="@../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazebank.Controllers.Client.DashboardController">
    <Text fx:id="user_name" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hi partick" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
-   <Label fx:id="login_date" styleClass="date_lbl" text="Today 2022-07-06" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
-   <Text layoutX="804.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Accpunts summary" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0" />
+   <Label fx:id="login_date" layoutX="628.0" layoutY="30.0" styleClass="date_lbl" text="Today 2022-07-06" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="30.0" />
+   <Text layoutX="606.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Accounts Summary" AnchorPane.rightAnchor="66.97654724121094" AnchorPane.topAnchor="89.0" />
    <Text layoutX="19.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="My Accounts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
-   <HBox layoutX="20.0" layoutY="127.0" prefHeight="180.0" prefWidth="620.0" styleClass="account_view" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
-      <AnchorPane prefHeight="150.0" prefWidth="295.0">
+   <HBox layoutX="20.0" layoutY="127.0" prefHeight="180.0" prefWidth="553.0" styleClass="account_view" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+      <AnchorPane prefHeight="160.0" prefWidth="256.0">
          <styleClass>
             <String fx:value="account" />
             <String fx:value="account_gradient" />
@@ -27,11 +27,13 @@
          <Label fx:id="checking_bal" layoutX="25.0" layoutY="22.0" styleClass="account_balance" text="\$3 500.56" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
          <Label layoutX="22.0" layoutY="74.0" styleClass="account_number" text="**** **** ****" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
          <Label fx:id="checking_acc_num" layoutX="148.0" layoutY="91.0" styleClass="account_number" text="4558" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="148.0" />
-         <VBox layoutX="181.0" layoutY="-20.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
-         <FontAwesomeIconView glyphName="BANK" layoutX="246.0" layoutY="46.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
-         <Text layoutX="14.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <Text fill="WHITE" layoutX="14.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <ImageView fitHeight="39.0" fitWidth="50.0" layoutX="205.0" layoutY="14.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../Images/debit-card.png"/>
+         </ImageView>
       </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="295.0">
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="160.0" prefWidth="261.0">
          <styleClass>
             <String fx:value="account" />
             <String fx:value="account_gradient" />
@@ -39,30 +41,31 @@
          <Label fx:id="saving_bal" layoutX="25.0" layoutY="22.0" styleClass="account_balance" text="\$3 500.56" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0" />
          <Label layoutX="22.0" layoutY="74.0" styleClass="account_number" text="**** **** ****" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
          <Label fx:id="saving_acc_num" layoutX="148.0" layoutY="91.0" styleClass="account_number" text="4558" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="148.0" />
-         <VBox layoutX="181.0" layoutY="-20.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
-         <FontAwesomeIconView glyphName="BANK" layoutX="246.0" layoutY="46.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
-         <Text layoutX="14.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <Text fill="WHITE" layoutX="14.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+         <ImageView fitHeight="39.0" fitWidth="50.0" layoutX="216.0" layoutY="14.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../Images/debit-card.png"/>
+         </ImageView>
       </AnchorPane>
    </HBox>
-   <VBox layoutX="723.0" layoutY="120.0" prefHeight="180.0" prefWidth="210.0" styleClass="summary_view" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
-      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="acc_summary_container">
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="income_account" text="Income"/>
-         <Label fx:id="income_bal" styleClass="income_account" text="+ $4000.00"/>
-         <Line endX="160.0"/>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Expensers"/>
-         <Label fx:id="expense_bal" styleClass="expense_amount" text="-$1500.00"/>
+   <VBox layoutX="590.0" layoutY="120.0" prefHeight="180.0" prefWidth="210.0" styleClass="summary_view" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="120.0">
+      <VBox prefHeight="170.0" prefWidth="154.0" styleClass="acc_summary_container">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="income_account" text="Income" />
+         <Label fx:id="income_bal" styleClass="income_account" text="+ $4000.00" textFill="#2c3e50" />
+         <Line endX="160.0" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Expenses" />
+         <Label fx:id="expense_bal" styleClass="expense_amount" text="-$1500.00" textFill="#2c3e50" />
       </VBox>
    </VBox>
    <Text layoutX="30.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest Treansactions" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
-   <Text layoutX="745.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Send Money" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
-   <ListView fx:id="transaction_listview" layoutX="20.0" layoutY="372.0" prefHeight="365.0" prefWidth="570.0" styleClass="transaction_lisview" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" />
-   <VBox layoutX="584.0" layoutY="375.0" prefHeight="366.0" prefWidth="240.0" styleClass="new_trans_container" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="26.0">
+   <ListView fx:id="transaction_listview" layoutX="20.0" layoutY="372.0" prefHeight="305.0" prefWidth="570.0" styleClass="transaction_lisview" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="20.0" />
+   <VBox layoutX="584.0" layoutY="375.0" prefHeight="316.0" prefWidth="210.0" styleClass="new_trans_container" AnchorPane.bottomAnchor="59.0" AnchorPane.rightAnchor="56.0">
       <Label text="Payee Address" />
       <TextField fx:id="payee_fid" />
       <Label text="Amount in $:" />
       <TextField fx:id="amount_fid" />
       <Label text="Massage:(Optional)" />
       <TextArea fx:id="message_fid" prefHeight="70.0" prefWidth="200.0" />
-      <Button fx:id="send_money_btn" mnemonicParsing="false" text="Send Money" />
+      <Button fx:id="send_money_btn" mnemonicParsing="false" styleClass="sendmoneybtn" text="Send Money" />
    </VBox>
 </AnchorPane>

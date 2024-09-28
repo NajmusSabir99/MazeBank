@@ -1,83 +1,69 @@
-/* Container for the entire login interface */
 .login_container {
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: white;
 }
 
-/* Container for the logo */
 .login_logo_container {
-    -fx-background-color: #627254;
+    -fx-background-color: #2c3e50;
     -fx-alignment: center;
 }
 
-/* Styling for text inside the logo container */
 .login_logo_container Text {
     -fx-font-size: 2em;
-    -fx-fill: #FFFFFF;
+    -fx-fill: white;
 }
 
-/* Styling for FontAwesome icons inside the logo container */
-.login_logo_container FontAwesomeIconView {
-    -fx-fill: #ECF39E;
-}
-
-/* Account selector styles */
 .account_selector {
-    -fx-background-color: #ECF39E;
+    -fx-background-color: white;
 }
 
-/* Label inside the account selector */
 .account_selector .label {
-    -fx-text-fill: #132A13;
+    -fx-text-fill: #2c3e50;
     -fx-font-size: 1.1em;
 }
 
-/* Arrow inside the account selector */
 .account_selector .arrow {
-    -fx-background-color: #132A13;
+    -fx-background-color: #2c3e50;
 }
 
-/* Popup menu for the choice box */
 #choice-box-popup-menu {
-    -fx-background-color: #ECF39E;
+    -fx-background-color: #2c3e50;
 }
 
-/* Container for the login form */
 .login_form_container {
     -fx-spacing: 15;
     -fx-alignment: top-left;
 }
 
-/* Labels inside the login form */
 .login_form_container Label {
     -fx-font-size: 1.1em;
     -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
 }
 
-/* Input fields inside the login form */
 .input_field {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: white;
     -fx-pref-height: 35;
     -fx-font-size: 1.2em;
+    -fx-text-fill: black;
 }
 
-/* Buttons inside the login form */
 .login_form_container Button {
-    -fx-background-color: #76885B;
-    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
     -fx-pref-width: 350;
     -fx-pref-height: 30;
     -fx-font-size: 1.2em;
 }
 
-/* Hover effect for buttons */
 .login_form_container Button:hover {
     -fx-cursor: hand;
 }
 
-/* Error label */
 .error_lbl {
-    -fx-text-fill: #FF0000;
+    -fx-text-fill: #2c3e50;
 }
+
 #choice-prompt-text {
     -fx-font-weight: 400;
+    -fx-text-fill: #2c3e50;
 }

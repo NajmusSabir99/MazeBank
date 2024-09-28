@@ -18,4 +18,6 @@ public class DashboardController {
     public TextField amount_fid;
     public TextArea message_fid;
     public Button send_money_btn;
+
+
 }

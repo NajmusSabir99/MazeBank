@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="accounts_view_container" stylesheets="@../Styles/Accounts.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazebank.Controllers.Client.AccountsController">
+   <Text fill="#2C3E50" layoutX="71.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" wrappingWidth="164.7200164794922" AnchorPane.leftAnchor="71.0" AnchorPane.topAnchor="39.106346130371094" />
+   <VBox layoutX="38.0" layoutY="71.0" prefHeight="212.0" prefWidth="202.0">
+      <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number" />
+      <Label fx:id="ch_acc_num" text="3452 4950" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Limit" />
+      <Label fx:id="transaction_limit" text="10" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
+      <Label fx:id="ch_acc_date" text="22/07/07" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+      <Label fx:id="ch_acc_bal" text="\$3000.00" />
+      <stylesheets>
+         <URL value="@../Styles/Accounts.css" />
+      </stylesheets>
+   </VBox>
+   <Text layoutX="87.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Account" wrappingWidth="182.6920928955078" />
+   <VBox layoutX="37.0" layoutY="423.0" prefHeight="300.0" prefWidth="183.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Number" />
+      <Label fx:id="sv_acc_num" text="3452 4950" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Withdrawal Limit" wrappingWidth="211.93505859375" />
+      <Label fx:id="withdraw_limit" text="10" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Created" />
+      <Label fx:id="sv_acc_date" text="22/07/07" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+      <Label fx:id="sv_acc_bal" text="\$3000.00" />
+   </VBox>
+   <Text layoutX="425.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds to Savings Account:" AnchorPane.rightAnchor="129.16998291015625" />
+   <TextField fx:id="amount_to_sv" layoutX="425.0" layoutY="88.0" prefHeight="24.0" prefWidth="296.0" />
+   <Button fx:id="trans_to_sv_btn" layoutX="425.0" layoutY="143.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="296.0" text="Transfer" />
+   <Text layoutX="425.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Funds to Savings Account:" />
+   <TextField fx:id="amount_to_ch" layoutX="425.0" layoutY="431.0" prefHeight="24.0" prefWidth="296.0" />
+   <Button fx:id="trans_to_cv_btn" layoutX="425.0" layoutY="492.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="296.0" text="Transfer">
+      <graphic>
+         <ImageView fitHeight="29.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../Images/arrow-up.png" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <ImageView fitHeight="24.0" fitWidth="34.0" layoutX="37.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Images/bank-check.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="38.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Images/passbook.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="459.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Images/down.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

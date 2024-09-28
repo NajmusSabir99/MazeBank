@@ -1,78 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0" styleClass="main_menu_container" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazebank.Controllers.Client.ClientMenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0"
+      prefWidth="180.0" styleClass="main_menu_container" xmlns="http://javafx.com/javafx/18"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazebank.Controllers.Client.ClientMenuController">
 
-   <children>
-      <AnchorPane prefHeight="722.0" prefWidth="180.0" styleClass="left_container">
-         <children>
-            <VBox layoutY="14.0" prefHeight="114.0" prefWidth="180.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
-               <children>
-                  <FontAwesomeIconView glyphName="BANK" size="30" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bank Baba" />
-               </children>
-            </VBox>
-            <VBox prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
-               <children>
-                  <Button fx:id="dashboard_btn" mnemonicParsing="false" text="Dashboard">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="HOME" />
-                     </graphic>
-                  </Button>
-                  <Button fx:id="transaction_btn" minWidth="150.0" mnemonicParsing="false" text="Transaction" textAlignment="JUSTIFY">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="HANDSHAKE_ALT" size="9" text="" />
-                     </graphic>
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="accounts_btn" mnemonicParsing="false" text="Accounts">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="ADDRESS_BOOK_ALT" />
-                     </graphic>
-                  </Button>
-                  <Line endX="120.0" />
-                  <Button fx:id="profile_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Profile">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="USER" size="20" />
-                     </graphic>
-                  </Button>
-                  <Button fx:id="logout_btn" mnemonicParsing="false" styleClass="alt_menu_btn" text="Logout">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="20" />
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox layoutY="602.0" prefHeight="120.0" prefWidth="180.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug?" />
-                  <Label text="Use this to report any error or Suggestions">
-                     <font>
-                        <Font size="7.0" />
-                     </font></Label>
-                  <Button fx:id="report_btn" mnemonicParsing="false" text="Report" textFill="WHITE">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="PLUS" />
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
-   </children>
    <stylesheets>
-      <URL value="@../Styles/ClientMenu.css" />
-      <URL value="@../Styles/ClientMenu.css" />
+      <URL value="@../Styles/ClientMenu.css"/>
    </stylesheets>
+   <AnchorPane prefHeight="722.0" prefWidth="192.0" styleClass="left_container" stylesheets="@../Styles/ClientMenu.css">
+      <VBox layoutX="18.0" layoutY="8.0" prefHeight="114.0" prefWidth="180.0" styleClass="title_container"
+            AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="8.0">
+         <ImageView fitHeight="54.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/bank.png"/>
+         </ImageView>
+         <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Uni Bank"/>
+      </VBox>
+      <VBox layoutX="8.0" layoutY="122.0" prefHeight="321.0" prefWidth="216.0" styleClass="menu_container"
+            AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="122.0">
+         <Button fx:id="dashboard_btn" maxWidth="150.0" mnemonicParsing="false" prefWidth="150.0" text="Dashboard">
+            <graphic>
+               <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/dashboard.png"/>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="transaction_btn" maxWidth="150.0" minWidth="115.0" mnemonicParsing="false" prefWidth="136.0"
+                 text="Transaction" textAlignment="JUSTIFY">
+            <font>
+               <Font size="15.0"/>
+            </font>
+            <graphic>
+               <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/handshake.png"/>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="accounts_btn" maxWidth="150.0" mnemonicParsing="false" prefWidth="150.0" text=" Accounts">
+            <graphic>
+               <ImageView fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../../Images/user.png"/>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Line endX="147.5" stroke="#2c3e50" styleClass="Line"/>
+         <Button fx:id="profile_btn" maxWidth="150.0" mnemonicParsing="false" styleClass="alt_menu_btn"
+                 stylesheets="@../Styles/ClientMenu.css" text="Profile" textFill="WHITE">
+            <graphic>
+               <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Images/profile.png"/>
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="logout_btn" maxWidth="150.0" mnemonicParsing="false" styleClass="alt_menu_btn" text="Logout">
+            <graphic>
+               <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Images/logout.png"/>
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+      </VBox>
+      <VBox layoutX="14.0" layoutY="443.0" prefHeight="195.0" prefWidth="197.0" styleClass="report_container">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug?"/>
+         <Label text="Use this to report any error or Suggestions">
+            <font>
+               <Font size="7.0"/>
+            </font>
+         </Label>
+         <Button fx:id="report_btn" maxWidth="150.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="3.0"
+                 text="Report" textFill="WHITE">
+         </Button>
+      </VBox>
+   </AnchorPane>
 </VBox>
